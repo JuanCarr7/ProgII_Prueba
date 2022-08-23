@@ -35,12 +35,9 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.txtAnioCursado = new System.Windows.Forms.TextBox();
-            this.txtCuatrimestre = new System.Windows.Forms.TextBox();
             this.dgvDetalleCarrera = new System.Windows.Forms.DataGridView();
-            this.clmId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmAnioCursado = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmCuatrimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rbtPrimerCuat = new System.Windows.Forms.RadioButton();
+            this.rbtSegundoCuat = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCarrera)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,23 +102,11 @@
             this.txtAnioCursado.Size = new System.Drawing.Size(277, 22);
             this.txtAnioCursado.TabIndex = 9;
             // 
-            // txtCuatrimestre
-            // 
-            this.txtCuatrimestre.Location = new System.Drawing.Point(204, 86);
-            this.txtCuatrimestre.Name = "txtCuatrimestre";
-            this.txtCuatrimestre.Size = new System.Drawing.Size(277, 22);
-            this.txtCuatrimestre.TabIndex = 10;
-            // 
             // dgvDetalleCarrera
             // 
             this.dgvDetalleCarrera.AllowUserToAddRows = false;
             this.dgvDetalleCarrera.AllowUserToDeleteRows = false;
             this.dgvDetalleCarrera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalleCarrera.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.clmId,
-            this.clmAnioCursado,
-            this.clmCuatrimestre,
-            this.clmMateria});
             this.dgvDetalleCarrera.Location = new System.Drawing.Point(12, 181);
             this.dgvDetalleCarrera.Name = "dgvDetalleCarrera";
             this.dgvDetalleCarrera.ReadOnly = true;
@@ -130,46 +115,36 @@
             this.dgvDetalleCarrera.Size = new System.Drawing.Size(556, 123);
             this.dgvDetalleCarrera.TabIndex = 11;
             // 
-            // clmId
+            // rbtPrimerCuat
             // 
-            this.clmId.HeaderText = "Id";
-            this.clmId.MinimumWidth = 6;
-            this.clmId.Name = "clmId";
-            this.clmId.ReadOnly = true;
-            this.clmId.Visible = false;
-            this.clmId.Width = 125;
+            this.rbtPrimerCuat.AutoSize = true;
+            this.rbtPrimerCuat.Location = new System.Drawing.Point(204, 89);
+            this.rbtPrimerCuat.Name = "rbtPrimerCuat";
+            this.rbtPrimerCuat.Size = new System.Drawing.Size(117, 20);
+            this.rbtPrimerCuat.TabIndex = 12;
+            this.rbtPrimerCuat.TabStop = true;
+            this.rbtPrimerCuat.Text = "1° Cuatrimestre";
+            this.rbtPrimerCuat.UseVisualStyleBackColor = true;
             // 
-            // clmAnioCursado
+            // rbtSegundoCuat
             // 
-            this.clmAnioCursado.HeaderText = "Año de Cursado";
-            this.clmAnioCursado.MinimumWidth = 6;
-            this.clmAnioCursado.Name = "clmAnioCursado";
-            this.clmAnioCursado.ReadOnly = true;
-            this.clmAnioCursado.Width = 125;
-            // 
-            // clmCuatrimestre
-            // 
-            this.clmCuatrimestre.HeaderText = "Cuatrimestre";
-            this.clmCuatrimestre.MinimumWidth = 6;
-            this.clmCuatrimestre.Name = "clmCuatrimestre";
-            this.clmCuatrimestre.ReadOnly = true;
-            this.clmCuatrimestre.Width = 125;
-            // 
-            // clmMateria
-            // 
-            this.clmMateria.HeaderText = "Materia";
-            this.clmMateria.MinimumWidth = 6;
-            this.clmMateria.Name = "clmMateria";
-            this.clmMateria.ReadOnly = true;
-            this.clmMateria.Width = 125;
+            this.rbtSegundoCuat.AutoSize = true;
+            this.rbtSegundoCuat.Location = new System.Drawing.Point(347, 87);
+            this.rbtSegundoCuat.Name = "rbtSegundoCuat";
+            this.rbtSegundoCuat.Size = new System.Drawing.Size(146, 25);
+            this.rbtSegundoCuat.TabIndex = 13;
+            this.rbtSegundoCuat.TabStop = true;
+            this.rbtSegundoCuat.Text = "2° Cuatrimestre";
+            this.rbtSegundoCuat.UseVisualStyleBackColor = true;
             // 
             // frmDetalleCarrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 396);
+            this.Controls.Add(this.rbtSegundoCuat);
+            this.Controls.Add(this.rbtPrimerCuat);
             this.Controls.Add(this.dgvDetalleCarrera);
-            this.Controls.Add(this.txtCuatrimestre);
             this.Controls.Add(this.txtAnioCursado);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
@@ -194,12 +169,9 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.TextBox txtAnioCursado;
-        private System.Windows.Forms.TextBox txtCuatrimestre;
         private System.Windows.Forms.DataGridView dgvDetalleCarrera;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmAnioCursado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmCuatrimestre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmMateria;
+        private System.Windows.Forms.RadioButton rbtPrimerCuat;
+        private System.Windows.Forms.RadioButton rbtSegundoCuat;
     }
 }
 
