@@ -1,0 +1,13 @@
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1.1.csproj.AssemblyReference.cache
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1.1.csproj.SuggestedBindingRedirects.cache
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1._1.frmDetalleCarrera.resources
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1._1.FrmPrincipal.resources
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1._1.Properties.Resources.resources
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1.1.csproj.GenerateResource.cache
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1.1.csproj.CoreCompileInputs.cache
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\bin\Debug\WinFormProblema1.1.exe.config
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\bin\Debug\WinFormProblema1.1.exe
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\bin\Debug\WinFormProblema1.1.pdb
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1.1.exe
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1.1.pdb
+C:\Users\carre\OneDrive\Documents\TUP\2C\Prog 2\WinFormProblema1.1\WinFormProblema1.1\obj\Debug\WinFormProblema1._1.FrmCarrera.resources
