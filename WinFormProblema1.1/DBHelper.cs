@@ -39,7 +39,7 @@ namespace WinFormProblema1._1
             Conectar(cadenaConexion);
             comando.CommandType = CommandType.StoredProcedure;
             comando.CommandText = NombreSp;
-            SqlParameter param1 = new SqlParameter(string parametro1, object objeto1 )
+            
         }
 
         public void Desconectar()

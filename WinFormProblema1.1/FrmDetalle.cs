@@ -13,7 +13,8 @@ namespace WinFormProblema1._1
     public partial class frmDetalleCarrera : Form
     {
         DBHelper datos = new DBHelper();
-        DetalleCarrera detalle = new DetalleCarrera();
+        bool nuevo = false;
+        List<DetalleCarrera> lDetalles = new List<DetalleCarrera>();
         
         public frmDetalleCarrera()
         {
@@ -22,17 +23,38 @@ namespace WinFormProblema1._1
 
         private void frmDetalleCarrera_Load(object sender, EventArgs e)
         {
-            CargarDataGrid();
+            CargarGrilla();
             CargarCombo();
+            nuevo= true;
+
         }
 
-        private void CargarDataGrid()
+        private void CargarGrilla() 
         {
-            DataTable tabla = new DataTable();
-            tabla = datos.consultarDB("pa_consultar_Detalle");
-            dgvDetalles.DataSource = tabla;
-
+            DataTable tabla = datos.consultarDB("pa_consultar_Detalle");
+            dgvDetalleCarrera.DataSource = tabla;
         }
+
+        //private void CargarGrilla()
+        //{
+        //    DataTable tabla = datos.consultarDB("pa_consultar_Detalle");
+        //    lDetalles.Clear();
+        //    foreach (DataRow fila in tabla.Rows) 
+        //    {
+        //        DetalleCarrera dc = new DetalleCarrera();
+        //        dc.AnioCursado = Convert.ToInt32(fila[1]);
+        //        dc.Materia.Nombre = fila[3].ToString();
+        //        dc.Cuatrimestre = fila[2].ToString();
+
+        //        lDetalles.Add(dc);
+
+
+        //    }
+        //    dgvDetalleCarrera.Columns.Contains()
+        //    dgvDetalleCarrera.Rows.
+
+
+        //}
 
         public void CargarCombo()
         {
@@ -43,5 +65,17 @@ namespace WinFormProblema1._1
             cboMateria.DisplayMember = tabla.Columns[1].ColumnName;
         }
 
+        private void btnAceptar_Click(object sender, EventArgs e)
+        {
+            if (nuevo == true)
+            {
+                //DetalleCarrera dC = new DetalleCarrera();
+                //if(txtAnioCursado.)
+                
+
+            }
+        }
+
+        
     }
 }

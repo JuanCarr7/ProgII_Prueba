@@ -30,8 +30,8 @@
         {
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCarrera = new System.Windows.Forms.TextBox();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
             this.lblDetalle = new System.Windows.Forms.Label();
             this.cboDetalles = new System.Windows.Forms.ComboBox();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -58,19 +58,19 @@
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Titulo";
             // 
-            // textBox1
+            // txtCarrera
             // 
-            this.textBox1.Location = new System.Drawing.Point(110, 26);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(240, 22);
-            this.textBox1.TabIndex = 2;
+            this.txtCarrera.Location = new System.Drawing.Point(110, 26);
+            this.txtCarrera.Name = "txtCarrera";
+            this.txtCarrera.Size = new System.Drawing.Size(240, 22);
+            this.txtCarrera.TabIndex = 2;
             // 
-            // textBox2
+            // txtTitulo
             // 
-            this.textBox2.Location = new System.Drawing.Point(110, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(240, 22);
-            this.textBox2.TabIndex = 3;
+            this.txtTitulo.Location = new System.Drawing.Point(110, 61);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(240, 22);
+            this.txtTitulo.TabIndex = 3;
             // 
             // lblDetalle
             // 
@@ -127,8 +127,8 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.cboDetalles);
             this.Controls.Add(this.lblDetalle);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTitulo);
+            this.Controls.Add(this.txtCarrera);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.lblNombre);
             this.Name = "FrmCarrera";
@@ -144,8 +144,8 @@
 
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCarrera;
+        private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Label lblDetalle;
         private System.Windows.Forms.ComboBox cboDetalles;
         private System.Windows.Forms.Button btnAceptar;

@@ -29,6 +29,7 @@ namespace WinFormProblema1._1
         {
             frC.ShowDialog();
             frC.Dispose();
+            
         }
     }
 }

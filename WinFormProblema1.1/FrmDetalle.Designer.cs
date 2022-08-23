@@ -34,10 +34,14 @@
             this.cboMateria = new System.Windows.Forms.ComboBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dgvDetalles = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
+            this.txtAnioCursado = new System.Windows.Forms.TextBox();
+            this.txtCuatrimestre = new System.Windows.Forms.TextBox();
+            this.dgvDetalleCarrera = new System.Windows.Forms.DataGridView();
+            this.clmId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmAnioCursado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmCuatrimestre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmMateria = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCarrera)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAnioCursado
@@ -45,7 +49,7 @@
             this.lblAnioCursado.AutoSize = true;
             this.lblAnioCursado.Location = new System.Drawing.Point(38, 37);
             this.lblAnioCursado.Name = "lblAnioCursado";
-            this.lblAnioCursado.Size = new System.Drawing.Size(130, 20);
+            this.lblAnioCursado.Size = new System.Drawing.Size(104, 16);
             this.lblAnioCursado.TabIndex = 1;
             this.lblAnioCursado.Text = "Año de Cursado";
             // 
@@ -92,42 +96,81 @@
             this.btnAceptar.TabIndex = 8;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
-            // textBox1
+            // txtAnioCursado
             // 
-            this.textBox1.Location = new System.Drawing.Point(204, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(277, 22);
-            this.textBox1.TabIndex = 9;
+            this.txtAnioCursado.Location = new System.Drawing.Point(204, 37);
+            this.txtAnioCursado.Name = "txtAnioCursado";
+            this.txtAnioCursado.Size = new System.Drawing.Size(277, 22);
+            this.txtAnioCursado.TabIndex = 9;
             // 
-            // textBox2
+            // txtCuatrimestre
             // 
-            this.textBox2.Location = new System.Drawing.Point(204, 86);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(277, 22);
-            this.textBox2.TabIndex = 10;
+            this.txtCuatrimestre.Location = new System.Drawing.Point(204, 86);
+            this.txtCuatrimestre.Name = "txtCuatrimestre";
+            this.txtCuatrimestre.Size = new System.Drawing.Size(277, 22);
+            this.txtCuatrimestre.TabIndex = 10;
             // 
-            // dgvDetalles
+            // dgvDetalleCarrera
             // 
-            this.dgvDetalles.AllowUserToAddRows = false;
-            this.dgvDetalles.AllowUserToDeleteRows = false;
-            this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDetalles.Location = new System.Drawing.Point(9, 190);
-            this.dgvDetalles.Name = "dgvDetalles";
-            this.dgvDetalles.ReadOnly = true;
-            this.dgvDetalles.RowHeadersWidth = 51;
-            this.dgvDetalles.RowTemplate.Height = 24;
-            this.dgvDetalles.Size = new System.Drawing.Size(559, 106);
-            this.dgvDetalles.TabIndex = 11;
+            this.dgvDetalleCarrera.AllowUserToAddRows = false;
+            this.dgvDetalleCarrera.AllowUserToDeleteRows = false;
+            this.dgvDetalleCarrera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDetalleCarrera.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clmId,
+            this.clmAnioCursado,
+            this.clmCuatrimestre,
+            this.clmMateria});
+            this.dgvDetalleCarrera.Location = new System.Drawing.Point(12, 181);
+            this.dgvDetalleCarrera.Name = "dgvDetalleCarrera";
+            this.dgvDetalleCarrera.ReadOnly = true;
+            this.dgvDetalleCarrera.RowHeadersWidth = 51;
+            this.dgvDetalleCarrera.RowTemplate.Height = 24;
+            this.dgvDetalleCarrera.Size = new System.Drawing.Size(556, 123);
+            this.dgvDetalleCarrera.TabIndex = 11;
+            // 
+            // clmId
+            // 
+            this.clmId.HeaderText = "Id";
+            this.clmId.MinimumWidth = 6;
+            this.clmId.Name = "clmId";
+            this.clmId.ReadOnly = true;
+            this.clmId.Visible = false;
+            this.clmId.Width = 125;
+            // 
+            // clmAnioCursado
+            // 
+            this.clmAnioCursado.HeaderText = "Año de Cursado";
+            this.clmAnioCursado.MinimumWidth = 6;
+            this.clmAnioCursado.Name = "clmAnioCursado";
+            this.clmAnioCursado.ReadOnly = true;
+            this.clmAnioCursado.Width = 125;
+            // 
+            // clmCuatrimestre
+            // 
+            this.clmCuatrimestre.HeaderText = "Cuatrimestre";
+            this.clmCuatrimestre.MinimumWidth = 6;
+            this.clmCuatrimestre.Name = "clmCuatrimestre";
+            this.clmCuatrimestre.ReadOnly = true;
+            this.clmCuatrimestre.Width = 125;
+            // 
+            // clmMateria
+            // 
+            this.clmMateria.HeaderText = "Materia";
+            this.clmMateria.MinimumWidth = 6;
+            this.clmMateria.Name = "clmMateria";
+            this.clmMateria.ReadOnly = true;
+            this.clmMateria.Width = 125;
             // 
             // frmDetalleCarrera
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(580, 396);
-            this.Controls.Add(this.dgvDetalles);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dgvDetalleCarrera);
+            this.Controls.Add(this.txtCuatrimestre);
+            this.Controls.Add(this.txtAnioCursado);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.cboMateria);
@@ -137,7 +180,7 @@
             this.Name = "frmDetalleCarrera";
             this.Text = "Detalle de la carrera";
             this.Load += new System.EventHandler(this.frmDetalleCarrera_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleCarrera)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,9 +193,13 @@
         private System.Windows.Forms.ComboBox cboMateria;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dgvDetalles;
+        private System.Windows.Forms.TextBox txtAnioCursado;
+        private System.Windows.Forms.TextBox txtCuatrimestre;
+        private System.Windows.Forms.DataGridView dgvDetalleCarrera;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmAnioCursado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmCuatrimestre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmMateria;
     }
 }
 

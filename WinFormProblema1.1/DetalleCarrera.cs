@@ -25,7 +25,7 @@ namespace WinFormProblema1._1
 
         public override string ToString()
         {
-            return "Año de cursado: "+AnioCursado.ToString()+" | Cuatrimestre: "+Cuatrimestre +" |"+Materia.ToString();
+            return "Año de cursado: "+AnioCursado.ToString()+" | Cuatrimestre: "+Cuatrimestre +" |"+Materia.Nombre;
         }
 
     }
