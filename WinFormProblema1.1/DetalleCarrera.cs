@@ -12,13 +12,14 @@ namespace WinFormProblema1._1
     {
         private int anioCursado;
         private string cuatrimestre;
-        private Asignatura materia;
+        //private Asignatura materia; Preguntar por el uso de una variable de tipo clase creada
+        private int materia;
         public int AnioCursado { set { anioCursado = value; } get { return anioCursado; } }
         public string Cuatrimestre { set { cuatrimestre = value; } get { return cuatrimestre; } }
-        public Asignatura Materia { set { materia = value; } get { return materia; } }
+        public int Materia { set { materia = value; } get { return materia; } }
 
         public DetalleCarrera() { }
-        public DetalleCarrera(int anioCursado, string cuatrimestre, Asignatura materia)
+        public DetalleCarrera(int anioCursado, string cuatrimestre, int materia)
         {
             this.anioCursado = anioCursado;
             this.cuatrimestre = cuatrimestre;
@@ -27,7 +28,7 @@ namespace WinFormProblema1._1
 
         public override string ToString()
         {
-            return "Año de cursado: "+AnioCursado.ToString()+" | Cuatrimestre: "+Cuatrimestre +" |"+Materia.Nombre;
+            return "Año de cursado: "+AnioCursado.ToString()+" | Cuatrimestre: "+Cuatrimestre +" |"+Materia;
         }
 
        

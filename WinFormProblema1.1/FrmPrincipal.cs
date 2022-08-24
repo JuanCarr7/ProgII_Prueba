@@ -21,7 +21,7 @@ namespace WinFormProblema1._1
 
         private void nuevoDetalleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frDC.ShowDialog();
+            frDC.ShowDialog(); // Preguntar porque cuando se desecha un frm, no se puede abrir de nuevo y como solucionarlo
             frDC.Dispose();
         }
 

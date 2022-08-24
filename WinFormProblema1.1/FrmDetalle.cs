@@ -27,7 +27,7 @@ namespace WinFormProblema1._1
             CargarGrilla();
             CargarCombo();
             nuevo= true;
-            cboMateria.SelectedIndex = -1;
+            LimpiarDetalle();
 
         }
 
@@ -63,9 +63,17 @@ namespace WinFormProblema1._1
             DataTable tabla = new DataTable();
             tabla = datos.consultarDB("pa_consultar_asignaturas");
             cboMateria.DataSource = tabla;
-            cboMateria.ValueMember = tabla.Columns[0].ColumnName;
-            cboMateria.DisplayMember = tabla.Columns[1].ColumnName;
+            cboMateria.ValueMember = tabla.Columns[0].ColumnName;//"Id Marca"
+            cboMateria.DisplayMember = tabla.Columns[1].ColumnName; // "Nombre marca"
         }
+        //public void CargarLista()
+        //{
+        //    DataTable tabla = new DataTable();
+        //    tabla = datos.consultarDB("pa_consultar_lista");
+        //    lstx.DataSource = tabla;
+        //    lstx.ValueMember = tabla.Columns[0].ColumnName;//"Id Marca"
+        //    lstx.DisplayMember = tabla.Columns[1].ColumnName; // "Nombre marca"
+        //}
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
@@ -73,7 +81,7 @@ namespace WinFormProblema1._1
             {
                 DetalleCarrera dC = new DetalleCarrera();
                 dC.AnioCursado = int.Parse(txtAnioCursado.Text);
-                dC.Materia.Id = Convert.ToInt32(cboMateria.SelectedValue);
+                dC.Materia = (int)(cboMateria.SelectedValue);
                 if (rbtPrimerCuat.Checked==true) 
                 {
                     dC.Cuatrimestre = "1C";
@@ -83,7 +91,7 @@ namespace WinFormProblema1._1
                     dC.Cuatrimestre = "2C";
                 }
 
-                datos.insertarDetalle(dC.AnioCursado, dC.Cuatrimestre, dC.Materia.Id);
+                datos.insertarDetalle(dC.AnioCursado, dC.Cuatrimestre, dC.Materia);
 
 
 
@@ -94,6 +102,18 @@ namespace WinFormProblema1._1
             {
                 MessageBox.Show("No se pudo cargar su detalle de carrera!");
             }
+
+            CargarGrilla();
+            LimpiarDetalle();
+        }
+
+        private void LimpiarDetalle()
+        {
+            txtAnioCursado.Text= "";
+            rbtPrimerCuat.Checked = false;
+            rbtSegundoCuat.Checked = false;
+            cboMateria.SelectedValue = -1;
+            
         }
 
         //public bool Existe(DetalleCarrera detalle)
@@ -106,7 +126,7 @@ namespace WinFormProblema1._1
 
         //    return valido;
         //}
-        
+
         public bool Validar()
         {
             bool valido = true;
