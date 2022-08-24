@@ -84,6 +84,7 @@
             this.btnCancelar.TabIndex = 7;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnAceptar
             // 
@@ -131,7 +132,7 @@
             this.rbtSegundoCuat.AutoSize = true;
             this.rbtSegundoCuat.Location = new System.Drawing.Point(347, 87);
             this.rbtSegundoCuat.Name = "rbtSegundoCuat";
-            this.rbtSegundoCuat.Size = new System.Drawing.Size(146, 25);
+            this.rbtSegundoCuat.Size = new System.Drawing.Size(117, 20);
             this.rbtSegundoCuat.TabIndex = 13;
             this.rbtSegundoCuat.TabStop = true;
             this.rbtSegundoCuat.Text = "2° Cuatrimestre";

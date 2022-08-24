@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
 
 namespace WinFormProblema1._1
 {
@@ -28,5 +30,6 @@ namespace WinFormProblema1._1
             return "Año de cursado: "+AnioCursado.ToString()+" | Cuatrimestre: "+Cuatrimestre +" |"+Materia.Nombre;
         }
 
+       
     }
 }

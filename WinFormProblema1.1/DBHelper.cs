@@ -33,12 +33,20 @@ namespace WinFormProblema1._1
             return tabla;
              
         }
-
-        public void insertarDB(string NombreSp, string parametro1, object objeto1)
+        
+        public void insertarDetalle(int p1, string p2, int p3)
         {
             Conectar(cadenaConexion);
             comando.CommandType = CommandType.StoredProcedure;
-            comando.CommandText = NombreSp;
+            comando.CommandText = "pa_insertar_detalle";
+            comando.Parameters.AddWithValue("@anio_cursado", p1);
+            comando.Parameters.AddWithValue("@cuatrimestre", p2);
+            comando.Parameters.AddWithValue("@id_asignatura", p3);
+            comando.ExecuteNonQuery();
+            Desconectar();
+            
+
+            ;
             
         }
 

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace WinFormProblema1._1
 {
@@ -26,6 +27,7 @@ namespace WinFormProblema1._1
             CargarGrilla();
             CargarCombo();
             nuevo= true;
+            cboMateria.SelectedIndex = -1;
 
         }
 
@@ -71,7 +73,7 @@ namespace WinFormProblema1._1
             {
                 DetalleCarrera dC = new DetalleCarrera();
                 dC.AnioCursado = int.Parse(txtAnioCursado.Text);
-                dC.Materia.Nombre = Convert.ToString(cboMateria.SelectedValue);
+                dC.Materia.Id = Convert.ToInt32(cboMateria.SelectedValue);
                 if (rbtPrimerCuat.Checked==true) 
                 {
                     dC.Cuatrimestre = "1C";
@@ -81,10 +83,7 @@ namespace WinFormProblema1._1
                     dC.Cuatrimestre = "2C";
                 }
 
-                if (!Existe(dC))
-                {
-
-                }
+                datos.insertarDetalle(dC.AnioCursado, dC.Cuatrimestre, dC.Materia.Id);
 
 
 
@@ -97,16 +96,16 @@ namespace WinFormProblema1._1
             }
         }
 
-        public bool Existe(DetalleCarrera detalle)
-        {
-            bool valido = true;
-            for (int i = 0; i < dgvDetalleCarrera.RowCount; i++)
-            {
-                if(detalle.AnioCursado==dgvDetalleCarrera.Rows)
-            }
+        //public bool Existe(DetalleCarrera detalle)
+        //{
+        //    bool valido = true;
+        //    for (int i = 0; i < dgvDetalleCarrera.RowCount; i++)
+        //    {
+        //        if(detalle.AnioCursado==dgvDetalleCarrera.Rows)
+        //    }
 
-            return valido;
-        }
+        //    return valido;
+        //}
         
         public bool Validar()
         {
@@ -143,9 +142,24 @@ namespace WinFormProblema1._1
                 cboMateria.Focus();
                 valido = false;
             }
+            foreach (DataGridViewRow row in dgvDetalleCarrera.Rows)
+            {
+                if (row.Cells[1].Value.ToString().Equals(txtAnioCursado.Text) && (row.Cells[2].Value.ToString().Equals("1C") ||row.Cells[2].Value.ToString().Equals("2C"))
+                    && row.Cells[3].Value.ToString().Equals(cboMateria.SelectedValue))
+                {
+                    MessageBox.Show("El detalle ya ha sido registrado previamente...");
+                    txtAnioCursado.Focus();
+                    valido = false;
+                }
+            }
+
             return valido;
            
         }
-        
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }
